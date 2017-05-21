@@ -27,7 +27,7 @@ class TestClass:
         assert todo_list.actions[3].name == "quit"
         assert todo_list.actions[3].entity == entity_table.get("End")
 
-        assert len(entity_table.items()) == 3
+        assert len(list(entity_table.items())) == 3
 
     def test_B(self):
         text = open('tests/B.txt', 'r').read()
@@ -61,4 +61,4 @@ class TestClass:
         assert todo_list.actions[3].name == "quit"
         assert todo_list.actions[3].entity == entity_table.get("End")
 
-        assert len(entity_table.items()) == 3
+        assert len(list(entity_table.items())) == 3

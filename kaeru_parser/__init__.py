@@ -129,11 +129,11 @@ class Lexer:
 
 class Printer:
     def show_list(self, entity_table):
-        for entity in entity_table.values():
-            print('[{}]'.format(entity.name))
+        for entity in list(entity_table.values()):
+            print(('[{}]'.format(entity.name)))
             for action in entity.actions:
-                print('  {:10s} ===> [{:}]'.format(
-                    action.name, action.entity.name))
+                print(('  {:10s} ===> [{:}]'.format(
+                    action.name, action.entity.name)))
             print()
 
 
